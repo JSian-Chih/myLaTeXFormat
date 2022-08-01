@@ -1,0 +1,135 @@
+% Chih, Chao-Hsien
+% 2022-02-21 Ver.1
+
+
+%------------------------------------------------------------
+
+
+% \setbeamercolor*{palette tertiary}{fg=black,bg=black!10} % 最上面(Section)的眉標
+% \setbeamercolor*{palette quaternary}{fg=black,bg=black!10} 
+
+% footline (\insert 自定義)
+% \defbeamertemplate*{footline}{mytheme}
+% {
+%   \leavevmode%
+%   \hbox{%
+%   \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+%     \usebeamerfont{author in head/foot}~\insertshortinstitute{}
+%   \end{beamercolorbox}%
+%   \begin{beamercolorbox}[wd=.7\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+%     \usebeamerfont{date in head/foot}\insertshortauthor{}\hspace*{20em}
+%     \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+%   \end{beamercolorbox}}%
+%   \vskip0pt%
+% }
+% \usebeamertemplate{mytheme}
+
+% ----------------------------------------------常用packege
+\usepackage{latexsym}
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+
+\usepackage{algorithm}
+\usepackage{amsthm}
+\usepackage{lmodern} % 解决 font warning
+
+\usepackage{animate} % insert gif
+
+\usepackage{lipsum} % To generate test text 
+\usepackage{ulem} % 下划线，波浪线
+
+\usepackage{listings} % display code on slides; don't forget [fragile] option after \begin{frame}
+
+
+% 2021-11-08
+\usepackage{graphicx} % 插入圖片 
+\graphicspath{{Figure/}} % 指定圖檔搜尋路徑
+\usepackage{fontspec} % 加這個就可以設定字體。
+\usepackage{xeCJK} % 讓中英文字體分開設置。
+%設定中文為系統上的字型，而英文不去更動，使用原TEX字型。
+\setCJKmainfont[AutoFakeBold=2]{MSJH.TTC}
+\setCJKsansfont[AutoFakeBold=2]{MSJH.TTC}
+%\setCJKmainfont[BoldFont={王漢宗特黑體繁}]{王漢宗細黑體繁}
+%\XeTeXlinebreaklocale "zh" %這兩行一定要加，中文才能自動換行。
+%\XeTeXlinebreakskip = 0pt plus 1pt % 這兩行一定要加，中文才能自動換行。
+
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{array}
+\usepackage{bm}
+\newcommand{\bmrm}[1]{\bm{\mathrm{#1}}}
+\usepackage{xcolor}
+\usepackage{bookmark}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{hyperref}
+\usepackage{animate}
+\usepackage{movie15}
+
+
+% 設置英文字體
+% \setsansfont[
+%     BoldFont=TIMESBD.TTF, 
+%     ItalicFont=TIMESI.TTF, 
+%     BoldItalicFont=TIMESBI.TTF 
+%     ]{TIMES.TTF}
+
+% ----------------------------------------------
+
+% Define the environment which puts the frame
+% In this case, the environment also accepts an argument with an optional
+% title (which defaults to ``Example'', which is typeset in a box overlaid
+% on the top border
+\newenvironment{parchment}[1][Example]{%
+  \def\FrameCommand{\parchmentframe}%
+  \def\FirstFrameCommand{\parchmentframetop}%
+  \def\LastFrameCommand{\parchmentframebottom}%
+  \def\MidFrameCommand{\parchmentframemiddle}%
+  \vskip\baselineskip
+  \MakeFramed {\FrameRestore}
+  \noindent\tikz\node[inner sep=1ex, draw=black!20, fill=black!90, 
+          anchor=west, overlay] at (0em, 2em) {\sffamily#1};\par}%
+{\endMakeFramed}
+
+% ---------------------------------------------------------------------
+% ---------------------------------------------------------------------
+
+% code setting
+\lstset{
+    language=C++,
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{red},
+    breaklines=true,
+    xleftmargin=2em,
+    numbers=left,
+    numberstyle=\color[RGB]{222,155,81},
+    frame=leftline,
+    tabsize=4,
+    breakatwhitespace=false,
+    showspaces=false,               
+    showstringspaces=false,
+    showtabs=false,
+    morekeywords={Str, Num, List},
+}
+
+% ---------------------------------------------------------------------
+
+\newcommand{\reditem}[1]{\setbeamercolor{item}{fg=red}\item #1}
+
+% 缩放公式大小
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}
+
+% 解决 font warning
+\renewcommand\textbullet{\ensuremath{\bullet}}
+
+% 圖片路徑
+\graphicspath{{figure}}
+
+% -------------------------------------------------------------
+
+% --------------------------------------------------------------
+% theme
+\usetheme{Productive}
+
+\setlength{\parskip}{0.5em}
+
