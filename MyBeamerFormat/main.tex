@@ -2,6 +2,14 @@
 \input{BeamerEnv.tex}
 \input{MathFunction.tex}
 
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
 %-----------------------------------------------------------------------------
 % DOCUMENT PROPERTIES
 
