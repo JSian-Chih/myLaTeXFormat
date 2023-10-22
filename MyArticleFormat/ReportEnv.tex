@@ -16,7 +16,7 @@
 
 \usepackage{listings} % display code on slides; don't forget [fragile] option after \begin{frame}
 % ----------------------------------------------
-
+% \usepackage[left=2.5cm, right=2.5cm, top=1.5cm, bottom=2.5cm]{geometry}
 \usepackage{float}
 % \usepackage{subfigure}
 \usepackage{caption}
@@ -73,6 +73,13 @@
     \renewcommand{\thetable}{#1}%
 }
 \captionsetup[table]{labelfont={bf},name={Table.},labelsep=period}
+
+% Uncomment and use as if needed
+%\newtheorem{theorem}{Theorem}
+% \newtheorem{lemma}[theorem]{Lemma}
+\newdefinition{rmk}{Remark}
+%\newproof{pf}{Proof}
+%\newproof{pot}{Proof of Theorem \ref{thm}}
 
 
 
