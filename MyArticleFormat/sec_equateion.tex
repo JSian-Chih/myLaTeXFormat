@@ -1,0 +1,39 @@
+
+In this paper, the 3--2--1 intrinsic convention is considered. The direction cosine matrix (DCM), $\sideset{^\mathcal{G}}{^\mathcal{B}}{\mathop{\mathbf{C}}}(\phi, \theta, \psi)$, is constructed in terms of the Euler angles as follows:
+\begin{equation} \label{eq::DCM}
+    \sideset{^\mathcal{G}}{^\mathcal{B}}{\mathop{\mathbf{C}}}(\phi, \theta, \psi) = \mathbf{R}_z(\psi) \mathbf{R}_y(\theta)  \mathbf{R}_x(\phi)
+\end{equation}
+where
+\begin{equation}
+    \begin{aligned}
+        \bmrm{R}_x(\phi) &=
+        \begin{bmatrix}
+            1 & 0      & 0     \\
+            0 & \cphi  & -\sphi \\
+            0 & \sphi & \cphi
+        \end{bmatrix},\quad 
+        \bmrm{R}_y(\theta) =
+        \begin{bmatrix}
+            \ctheta & 0 & \stheta \\
+            0       & 1 & 0        \\
+            -\stheta & 0 & \ctheta
+        \end{bmatrix},\\
+        \bmrm{R}_z(\psi) &=
+        \begin{bmatrix}
+            \cpsi  & -\spsi & 0 \\
+            \spsi  & \cpsi & 0 \\
+            0      & 0     & 1
+        \end{bmatrix}
+    \end{aligned}
+\end{equation}
+are the rotation matrices and the notations $s_{(\cdot)}$ and $c_{(\cdot)}$ represent $\sin(\cdot)$ and $\cos(\cdot)$, respectively. 
+
+\begin{equation} \label{eq:attitude_error_dynamics}
+    \begin{aligned}
+        \dot{\bmrm{e}}_{1,\Theta} ={}& \bmrm{e}_{2,\Theta} \\
+        \dot{\bmrm{e}}_{2,\Theta} ={}& -\bmrm{T}^{-1} \bmrm{J}^{-1} \bmrm{J}_0 \bmrm{T} \bigg(\bmrm{K}_{p,\Theta} \bmrm{e}_{1,\Theta} + \bmrm{K}_{i,\Theta} \int^t_0 \! \bmrm{e}_{1,\Theta}\,d\tau \\
+        &+ \bmrm{K}_{d,\Theta} \bmrm{e}_{2,\Theta} \bigg) +\left[\bmrm{JT}\right]^{-1}\bmrm{d}_{\Theta} \\
+        &+\left(\left[\bmrm{JT}\right]^{-1} \bmrm{J}_0 \bmrm{T} -\bmrm{I}_3 \right)\ddot{\bmrm{x}}_{1d,\Theta} \\
+        &- \left[\bmrm{JT}\right]^{-1} \left( \left[ \bmrm{T}\bmrm{x}_{2,\Theta} \right]^{\times} \Delta \bmrm{J} \bmrm{T} \bmrm{x}_{2,\Theta} -\Delta \bmrm{J} \dot{\bmrm{T}}\bmrm{x}_{2,\Theta} \right)
+    \end{aligned}
+\end{equation}

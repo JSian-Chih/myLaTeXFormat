@@ -1,0 +1,43 @@
+
+
+\begin{table}[ht]
+    \centering
+    \caption{Simulated system parameters}
+    \begin{tabular}{ccccc}
+        \toprule
+        $m$ (kg) & $g$ (m/s${}^2$) & $\bmrm{J}$ (kg-m${}^2$) & $L$ (m) & $C_d$ \\
+        \midrule
+        & \\
+        $0.65$ & $9.8$ & $\begin{bmatrix}
+        0.1287 & 0 & 0 \\
+        0 & 0.1287 & 0 \\
+        0 & 0 & 0.052
+        \end{bmatrix}$ & $0.45$ & $0.05$ \\ & \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:Sim_Para}
+\end{table}
+
+\begin{table}[H]
+    \setlength{\abovecaptionskip}{0cm}
+    \caption{Levenberg-Marquardt Method pseudo code.}
+        \begin{minipage}{\linewidth}
+            \begin{algorithm}[H]
+                \caption{Levenberg-Marquardt Method}\label{alg:LM}
+                \begin{algorithmic}
+                    \State \textbf{given} an initial value $\bmrm{u}^{(0)}$, $\lambda^{(0)} = 1000$, $\epsilon = 10^{-5}$.
+                    \Repeat
+                    \State 1.~Determine a Jacobian matrix $\bmrm{J}_{\bmrm{r}}^{(k)}$.
+                    \State 2. Update the damping parameter $\lambda^{(k)}$.
+                    \State 3.~Update the LM step. 
+                    \State ~~~~$\bmrm{d}^{(k)} = -\left({\bmrm{J}_{\bmrm{r}}^{(k)T}} \bmrm{J}_{\bmrm{r}}^{(k)} +\lambda^{(k)} {\bmrm{I}_4} \right)^{-1} \bmrm{J}_{\bmrm{r}}^{(k)T} \bmrm{r}(\bmrm{u}^{(k)})$.
+                    \State 4.~Update the control variables.
+                    \State ~~~~$\bmrm{u}^{(k+1)} = \bmrm{u}^{(k)} +\bmrm{d}^{(k)}$.
+                    \State ~~~~$k \leftarrow k+1$.
+                    \State 5. Compute the residual error vector to evaluate the stopping condition.
+                    \State ~~~~$\bmrm{r}(\bmrm{u}^{(k+1)}) = [r_1, r_2, r_3, r_4]^T$ 
+                    \Until{$\| \bmrm{r} \| < \epsilon $ is satisfied, $\vec{u}^{*}=\vec{u}^{(k+1)}$.}
+                \end{algorithmic}
+            \end{algorithm}
+        \end{minipage}
+    \end{table}
