@@ -1,0 +1,97 @@
+
+% ----------------------------------------------常用packege
+\usepackage{latexsym}
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+% \usepackage[x11names]{xcolor}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{amsthm}
+\usepackage{lmodern} % 解決 font warning
+\usepackage{animate} % insert gif
+\usepackage{environ}[1] % 自訂環境的plus版
+\usepackage{lipsum} % To generate test text 
+\usepackage{ulem} % 下劃線，波浪線
+
+\usepackage{listings} % display code on slides; don't forget [fragile] option after \begin{frame}
+% ----------------------------------------------
+\usepackage{float}
+% \usepackage{subfigure}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{bm}
+\newcommand{\bmrm}[1]{\bm{\mathrm{#1}}}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{hyperref}
+% \usepackage{movie15}
+\usepackage{textcomp}
+\usepackage{cite}
+\usepackage{subfig}
+\usepackage{makecell}
+\usepackage{kantlipsum}% dummy text
+\usepackage{stfloats}
+
+\usepackage{booktabs}
+
+% 縮排
+\usepackage{indentfirst} 
+\setlength{\parindent}{2em}
+
+% 行距
+\linespread{1.4}\selectfont
+
+% xeCJK
+\usepackage{xeCJK}
+% 中文字體設定
+\usepackage{fontspec} % 加這個就可以設定字體。
+%設定中文為系統上的字型，而英文不去更動，使用原TEX字型。
+\setCJKmainfont{ch}[
+    Path=./Font/,
+    UprightFont=KAIU.TTF,
+    AutoFakeBold=3.0,
+    AutoFakeSlant=0.0
+    ]
+\XeTeXlinebreaklocale "zh" %這兩行一定要加，中文才能自動換行。
+\XeTeXlinebreakskip = 0pt plus 1pt % 這兩行一定要加，中文才能自動換行。
+
+\setmainfont{Times New Roman}
+
+% figure 設定
+% ------ figure 路徑 ------
+\graphicspath{{figure}} 
+% ------ figure tag ------
+\newcommand{\figuretag}[1]{%
+    \addtocounter{figure}{-1}%
+    \renewcommand{\thefigure}{#1}%
+}
+\captionsetup[figure]{labelfont={bf},name={Figure.},labelsep=period}
+% ------ table tag ------
+\newcommand{\tabletag}[1]{%
+    \addtocounter{table}{-1}%
+    \renewcommand{\thetable}{#1}%
+}
+\captionsetup[table]{labelfont={bf},name={Table.},labelsep=period}
+
+
+% Thesis format set
+\usepackage[subfigure]{tocloft}
+\renewcommand{\cftchapfont}{\scshape}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftfigfont}{Figure }
+\renewcommand{\cfttabfont}{Table }
+\renewcommand\cftchapafterpnum{\vskip2pt}
+\renewcommand\cftsecafterpnum{\vskip1pt}
+\renewcommand{\cftchapfont}{\normalfont\bfseries}% titles in bold
+\renewcommand{\cftchappagefont}{\normalfont\bfseries}% page numbers in bold
+\renewcommand{\cftdotsep}{1}
+\renewcommand{\cftchapleader}{\bfseries\cftdotfill{\cftsecdotsep}}% dot leaders in bold
+\renewcommand{\cftsecfont}{}% Remove \bfseries from section titles in ToC
+\renewcommand{\cftsecpagefont}{}% Remove \bfseries from section titles' page in ToC
+\renewcommand{\bibname}{Reference}
+
+% \newenvironment*{envname}[args][default]{begdef}{enddef}
+
+\theoremstyle{rmk}
+\newtheorem{rmk}{Remark}

@@ -1,0 +1,73 @@
+
+
+
+
+\documentclass[openany]{nckuthesis}
+\input{Inf_Env_Fun/nckuinf.tex}
+\usepackage[utf8]{inputenc}
+% Using the tex-text mapping for ligatures etc.
+\defaultfontfeatures{Mapping=tex-text}
+
+\input{Inf_Env_Fun/ThesisEnv.tex}
+\input{Inf_Env_Fun/MathFunction.tex}
+\input{Inf_Env_Fun/CodeEnv.tex}
+
+
+\begin{document}
+
+
+\frontmatter
+\makecover
+\setcounter{page}{0}
+\thispagestyle{empty}
+
+\input{frontmatter/abstract.tex}
+\input{frontmatter/acknowledgements.tex}
+
+\newpage
+\tableofcontents
+\addcontentsline{toc}{chapter}{Contents}
+\newpage
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+\newpage
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+\mainmatter
+% Your thesis goes here
+
+\chapter{Introduction}
+
+\section{Motivation}
+
+
+
+
+\section{Review of Prior Studies and Literature}
+
+
+\section{Organization and Contributions of the Dissertation}
+
+
+
+\chapter{Conclusion}
+
+
+\chapter{Future Work} \label{chap:future_work}
+
+\appendix
+
+\backmatter
+\phantomsection
+\addcontentsline{toc}{chapter}{\bibname}
+% \bibliographystyle{abbrv}
+\bibliographystyle{ieeetr}
+
+% Your bibliography goes here
+\bibliography{bib/myReference.bib}
+
+
+
+\end{document}
+

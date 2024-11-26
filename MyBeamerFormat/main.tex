@@ -50,10 +50,90 @@
     \tableofcontents
 \end{frame}
 
-\section{Test}
+\section{Review of Prior Studies and Literature}
 
-\begin{frame}
-    Test, I'm handsome.
+\begin{frame}{Review of Prior Studies and Literature}
+    \begin{block}{The Coaxial Rotor UAV}
+        \begin{itemize}
+            \item 123
+        \end{itemize}
+    \end{block}
+    \begin{alertblock}{The Swashplateless MAV}
+        \begin{itemize}
+            \item 123
+        \end{itemize}
+    \end{alertblock}
+    \begin{exampleblock}{The Vectored-Thrust Coaxial UAV}
+        \begin{itemize}
+            \item 123
+        \end{itemize}
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Review of Prior Studies and Literature}
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+            \begin{block}{The Coaxial Rotor UAV}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=0.7\linewidth]{Prior_1.png}
+                \end{figure}
+            \end{block}
+            \begin{alertblock}{The Swashplateless MAV}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=0.7\linewidth]{Prior_2.png}
+                \end{figure}
+            \end{alertblock}
+        \end{column}
+        \begin{column}{0.5\linewidth}
+            \begin{exampleblock}{The Vectored-Thrust Coaxial UAV}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=0.7\linewidth]{Prior_3.png}
+                \end{figure}
+            \end{exampleblock}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{LM-based Optimal Algorithm}
+    \begin{center}
+        \begin{minipage}{\linewidth}
+            \begin{algorithm}[H]
+                \caption{LM-based Optimal Control Allocation Algorithm}\label{alg:LM}
+                \begin{algorithmic}
+                    \State \textbf{given} an initial value $\bmrm{u}^{(0)}$, $\lambda^{(0)} = 1000$, $\epsilon = 10^{-5}$.
+                    \Repeat
+                    \State 1.~Determine a Jacobian matrix $\bmrm{J}_{\bmrm{r}}^{(k)}$.
+                    \State 2. Update the damping parameter $\lambda^{(k)}$.
+                    \State 3.~Update the LM step. 
+                    \State ~~~~$\bmrm{d}^{(k)} = -\left({\bmrm{J}_{\bmrm{r}}^{(k)T}} \bmrm{J}_{\bmrm{r}}^{(k)} +\lambda^{(k)} {\bmrm{I}_4} \right)^{-1} \bmrm{J}_{\bmrm{r}}^{(k)T} \bmrm{r}(\bmrm{u}^{(k)})$.
+                    \State 4.~Update the control variables.
+                    \State ~~~~$\bmrm{u}^{(k+1)} = \bmrm{u}^{(k)} +\bmrm{d}^{(k)}$.
+                    \State ~~~~$k \leftarrow k+1$.
+                    \Until{$\| \bmrm{r} \| < \epsilon $ is satisfied, $\bmrm{u}^{*}=\bmrm{u}^{(k+1)}$.}
+                \end{algorithmic}
+            \end{algorithm}
+        \end{minipage}
+    \end{center}
+    \begin{itemize}
+        \item In the first iteration step, the initial value $\bmrm{u}^{(0)}$ will be set to zero. After, the initial value is set to the solved result of the previous step.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{LM-based Optimal Algorithm}
+    \begin{itemize}
+        \item The condition number $\mathcal{C}$ of the matrix $\left({\bmrm{J}_{\bmrm{r}}^{(k)T}} \bmrm{J}_{\bmrm{r}}^{(k)} +\lambda \bmrm{I}_3\right)$ is calculated, and adjust $\lambda$ adaptively:
+        \begin{equation}
+            \lambda=
+            \begin{cases}
+                1000,  &\mathcal{C} \geq 10^5\\
+                0.001, &\mathcal{C} < 10^5
+            \end{cases}
+        \end{equation}
+        \item When the reduction of {\color{Red1}the cost function is rapid}, a {\color{Red1}smaller value} can be applied to accelerate the speed of converting. On the other hand, if the matrix $\left({\bmrm{J}_{\bmrm{r}}^{(k)T}} \bmrm{J}_{\bmrm{r}}^{(k)} +\lambda \bmrm{I}_3\right)$ is {\color{Red1}ill-condition} to introduce the numerical errors, the {\color{Red1}larger value} is used to converge with the small gradient step.
+    \end{itemize}
 \end{frame}
 
 

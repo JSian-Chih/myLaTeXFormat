@@ -15,7 +15,7 @@
 
 \title{Title}
 \author{Name}
-\date{\today}	
+\date{\today}
 
 \begin{document}
 
@@ -55,7 +55,18 @@ Now, I will use another automatically-generated footnote marker
 
 \input{sec_table.tex}
 
+\section{Subfiles Example}
 
+\subfile{Subfolder_example/sec_subfiles.tex}
 
+\appendix
+
+\section{Matlab Code}
+\begin{lstinputlisting}[style=Matlab]{main.m}
+\end{lstinputlisting}
+
+\section{C++ Code}
+\begin{lstinputlisting}[style=C++]{main.cpp}
+\end{lstinputlisting}
 
 \end{document}

@@ -1,0 +1,57 @@
+% 顯示程式碼設定
+\usepackage{listings} % display code on slides; don't forget [fragile] option after \begin{frame}    
+    \lstset{inputpath={code}}
+
+    \definecolor{CcodeBlue}{rgb}{0,0,1}
+    \definecolor{CcodeGreen}{rgb}{0,0.5,0}
+    \definecolor{CcodeRed}{rgb}{0.64,0.08,0.08}
+
+    \lstdefinestyle{C++}{
+        language=C++,
+        captionpos=b,                       % 讓Caption在Bottom的位置
+        numbers=left,                       % 程式碼行號
+        frame=lines,                        %開始結束有條黑線
+        showstringspaces=false,             % "不"標註空格
+        escapeinside={(@}{@)},            % 脫逃字元
+        commentstyle=\color{CcodeGreen},         % Comment顏色
+        keywordstyle=\color{CcodeBlue},          % Keyword顏色
+        stringstyle=\color{CcodeRed},            % String顏色
+        basicstyle=\ttfamily\small,         % 字型
+  }
+
+\definecolor{MatlabGreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{MatlabLilas}{RGB}{170,55,241}
+
+\lstdefinestyle{Matlab}{language=Matlab,%
+    %basicstyle=\color{red},
+    basicstyle=\ttfamily\small,         % 字型
+    frame=lines,                        %開始結束有條黑線
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},
+    stringstyle=\color{MatlabLilas},
+    commentstyle=\color{MatlabGreen},
+    showstringspaces=false,             %without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},  % size of the numbers
+    numbersep=9pt,                      % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+%% Matlab code block example 
+% \begin{lstinputlisting}[style=Matlab]{main.m}
+% \end{lstinputlisting}
+
+%% C++ code block example
+% \begin{lstlisting}[style=C++]
+%   #include <iostream>
+%   int main()
+%   {
+%       // Print Hello (@Test escapeinside@)
+%       std::cout << "Hello, world!" << std::endl;
+%       return 0;
+%   }
+% \end{lstlisting}
+

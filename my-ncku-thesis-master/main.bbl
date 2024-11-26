@@ -1,0 +1,105 @@
+\begin{thebibliography}{10}
+
+\bibitem{ducard_review_2021}
+G.~J. Ducard and M.~Allenspach, ``Review of designs and flight control techniques of hybrid and convertible {VTOL} {UAVs},'' {\em Aerospace Science and Technology}, vol.~118, p.~107035, Nov. 2021.
+
+\bibitem{baiocco_overview_2021}
+P.~Baiocco, ``Overview of reusable space systems with a look to technology aspects,'' {\em Acta Astronautica}, vol.~189, pp.~10--25, Dec. 2021.
+
+\bibitem{rubio_hervas_thrust-vector_2014}
+J.~Rubio~Hervas and M.~Reyhanoglu, ``Thrust-vector control of a three-axis stabilized upper-stage rocket with fuel slosh dynamics,'' {\em Acta Astronautica}, vol.~98, pp.~120--127, May 2014.
+
+\bibitem{wang2019optimal}
+J.~Wang, N.~Cui, and C.~Wei, ``Optimal rocket landing guidance using convex optimization and model predictive control,'' {\em Journal of guidance, control, and dynamics}, vol.~42, no.~5, pp.~1078--1092, 2019.
+
+\bibitem{henderson_hovering_2022}
+T.~Henderson, R.~Favour, B.~Hamlen, I.~Mitha, E.~Bowe, and N.~Papanikolopoulos, ``Hovering {Locomotion} for {UAVs} {With} {Thrust}-{Vectoring} {Control} {Surfaces},'' {\em IEEE Robotics and Automation Letters}, vol.~7, pp.~5214--5221, Apr. 2022.
+
+\bibitem{he_design_2022}
+X.~He and Y.~Wang, ``Design and {Trajectory} {Tracking} {Control} of a {New} {Bi}-{Copter} {UAV},'' {\em IEEE Robotics and Automation Letters}, vol.~7, pp.~9191--9198, Oct. 2022.
+
+\bibitem{mokhtari_disturbance_2017}
+M.~R. Mokhtari, B.~Cherki, and A.~C. Braham, ``Disturbance observer based hierarchical control of coaxial-rotor {UAV},'' {\em ISA Transactions}, vol.~67, pp.~466--475, Mar. 2017.
+
+\bibitem{zhao_design_2016}
+N.~Zhao, H.~Deng, C.~Wang, K.~Li, and S.~Jia, ``Design and dynamic modelling of a coaxial-rotor system,'' in {\em 2016 8th {International} {Conference} on {Modelling}, {Identification} and {Control} ({ICMIC})}, (Algiers, Algeria), pp.~989--994, IEEE, Nov. 2016.
+
+\bibitem{wei_research_2019}
+Y.~Wei, H.~Chen, K.~Li, H.~Deng, and D.~Li, ``Research on the {Control} {Algorithm} of {Coaxial} {Rotor} {Aircraft} based on {Sliding} {Mode} and {PID},'' {\em Electronics}, vol.~8, p.~1428, Nov. 2019.
+
+\bibitem{li_longitudinal_2019}
+K.~Li, Y.~Wei, C.~Wang, and H.~Deng, ``Longitudinal {Attitude} {Control} {Decoupling} {Algorithm} {Based} on the {Fuzzy} {Sliding} {Mode} of a {Coaxial}-{Rotor} {UAV},'' {\em Electronics}, vol.~8, p.~107, Jan. 2019.
+
+\bibitem{garcia_modeling_2009}
+O.~Garcia, A.~Sanchez, K.~Wong, and R.~Lozano, ``Modeling and control of a vectored-thrust coaxial {UAV},'' in {\em 2009 {European} {Control} {Conference} ({ECC})}, (Budapest), pp.~695--700, IEEE, Aug. 2009.
+
+\bibitem{fanLevenbergMarquardt2013}
+J.~Fan and {,Department of Mathematics, and MOE-LSC, Shanghai Jiao Tong University, Shanghai 200240}, ``On the levenberg-marquardt methods for convex constrained nonlinear equations,'' {\em Journal of Industrial \& Management Optimization}, vol.~9, no.~1, pp.~227--241, 2013.
+
+\bibitem{kanzowLevenberg2004}
+C.~Kanzow, N.~Yamashita, and M.~Fukushima, ``Levenberg\textendash marquardt methods with strong local convergence properties for solving nonlinear equations with convex constraints,'' {\em Journal of Computational and Applied Mathematics}, vol.~172, pp.~375--397, Dec. 2004.
+
+\bibitem{kozakevichSolving}
+D.~N. Kozakevich and S.~A. Santos, ``Solving nonlinear systems of equations with simple constraints,'' p.~23.
+
+\bibitem{levant1993sliding}
+A.~Levant, ``Sliding order and sliding accuracy in sliding mode control,'' {\em International journal of control}, vol.~58, no.~6, pp.~1247--1263, 1993.
+
+\bibitem{moreno2008lyapunov}
+J.~A. Moreno and M.~Osorio, ``A lyapunov approach to second-order sliding mode controllers and observers,'' in {\em 2008 47th IEEE conference on decision and control}, pp.~2856--2861, IEEE, 2008.
+
+\bibitem{nanNonlinear2022}
+F.~Nan, S.~Sun, P.~Foehn, and D.~Scaramuzza, ``Nonlinear mpc for quadrotor fault-tolerant control,'' {\em IEEE Robotics and Automation Letters}, vol.~7, pp.~5047--5054, Apr. 2022.
+
+\bibitem{patelDesign2022}
+A.~Patel, A.~Banerjee, B.~Lindqvist, C.~Kanellakis, and G.~Nikolakopoulos, ``Design and model predictive control of a mars coaxial quadrotor,'' in {\em 2022 IEEE Aerospace Conference (AERO)}, (Big Sky, MT, USA), pp.~1--11, IEEE, Mar. 2022.
+
+\bibitem{peng_dynamic_2009}
+C.-C. Peng and C.-L. Chen, ``Dynamic controller design for a class of nonlinear uncertain systems subjected to time-varying disturbance,'' {\em Nonlinear Dynamics}, vol.~57, pp.~411--423, Aug. 2009.
+
+\bibitem{peng_nonlinear_2017}
+C.-C. Peng, ``Nonlinear {Integral} {Type} {Observer} {Design} for {State} {Estimation} and {Unknown} {Input} {Reconstruction},'' {\em Applied Sciences}, vol.~7, p.~67, Jan. 2017.
+
+\bibitem{li_super-twisting_2021}
+Y.-R. Li and C.-C. Peng, ``Super-{Twisting} {Sliding} {Mode} {Control} {Law} {Design} for {Attitude} {Tracking} {Task} of a {Spacecraft} via {Reaction} {Wheels},'' {\em Mathematical Problems in Engineering}, vol.~2021, pp.~1--13, Mar. 2021.
+
+\bibitem{peng_modeling_2021}
+C.-C. Peng and C.-Y. Su, ``Modeling and {Parameter} {Identification} of a {Cooling} {Fan} for {Online} {Monitoring},'' {\em IEEE Transactions on Instrumentation and Measurement}, vol.~70, pp.~1--14, 2021.
+
+\bibitem{peng_recursive_2022}
+C.-C. Peng and T.-Y. Chen, ``A recursive low-pass filtering method for a commercial cooling fan tray parameter online estimation with measurement noise,'' {\em Measurement}, vol.~205, p.~112193, Dec. 2022.
+
+\bibitem{tetreault_active_2020}
+E.~Tetreault, D.~Rancourt, and A.~Lussier~Desbiens, ``Active {Vertical} {Takeoff} of an {Aquatic} {UAV},'' {\em IEEE Robotics and Automation Letters}, pp.~1--1, 2020.
+
+\bibitem{gill_computationally_2019}
+R.~Gill and R.~D’Andrea, ``Computationally {Efficient} {Force} and {Moment} {Models} for {Propellers} in {UAV} {Forward} {Flight} {Applications},'' {\em Drones}, vol.~3, p.~77, Oct. 2019.
+
+\bibitem{chen_extended_2017}
+L.-H. Chen and C.-C. Peng, ``Extended {Backstepping} {Sliding} {Controller} {Design} for {Chattering} {Attenuation} and {Its} {Application} for {Servo} {Motor} {Control},'' {\em Applied Sciences}, vol.~7, p.~220, Feb. 2017.
+
+\bibitem{chung-shi_tseng_multiobjective_2001}
+{Chung-Shi Tseng} and {Bor-Sen Chen}, ``Multiobjective {PID} control design in uncertain robotic systems using neural network elimination scheme,'' {\em IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans}, vol.~31, pp.~632--644, Nov. 2001.
+
+\bibitem{sanalitro_full-pose_2020}
+D.~Sanalitro, H.~J. Savino, M.~Tognon, J.~Cortes, and A.~Franchi, ``Full-{Pose} {Manipulation} {Control} of a {Cable}-{Suspended} {Load} {With} {Multiple} {UAVs} {Under} {Uncertainties},'' {\em IEEE Robotics and Automation Letters}, vol.~5, pp.~2185--2191, Apr. 2020.
+
+\bibitem{chenControl2012}
+C.-L. Chen and C.-C. Peng, ``Control of a perturbed chaotic system by using a trajectory trapping strategy,'' {\em Nonlinear Dynamics}, vol.~69, pp.~2105--2115, Sept. 2012.
+
+\bibitem{mckayExperimental2021}
+R.~S. McKay, M.~J. Kingan, S.~T. Go, and R.~Jung, ``Experimental and analytical investigation of contra-rotating multi-rotor uav propeller noise,'' {\em Applied Acoustics}, vol.~177, p.~107850, June 2021.
+
+\bibitem{priorReviewing2010}
+S.~D. Prior, ``Reviewing and investigating the use of co-axial rotor systems in small uavs,'' {\em International Journal of Micro Air Vehicles}, vol.~2, pp.~1--16, Mar. 2010.
+
+\bibitem{koehlAerodynamic2012}
+A.~Koehl, H.~Rafaralahy, M.~Boutayeb, and B.~Martinez, ``Aerodynamic modelling and experimental identification of a coaxial-rotor uav,'' {\em Journal of Intelligent \& Robotic Systems}, vol.~68, pp.~53--68, Sept. 2012.
+
+\bibitem{torijaPsychoacoustic2021}
+A.~J. Torija, P.~Chaitanya, and Z.~Li, ``Psychoacoustic analysis of contra-rotating propeller noise for unmanned aerial vehicles,'' {\em The Journal of the Acoustical Society of America}, vol.~149, pp.~835--846, Feb. 2021.
+
+\bibitem{theysInfluence}
+B.~Theys, G.~Dimitriadis, P.~Hendrick, J.~D. Schutter, and {\relax KU}.~Leuven, ``Influence of propeller configuration on propulsion system efficiency of multi-rotor unmanned aerial vehicles,''
+
+\end{thebibliography}
