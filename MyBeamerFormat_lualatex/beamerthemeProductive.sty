@@ -1,0 +1,167 @@
+% Copyright 2020 by Keitaro Hashimoto
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+\mode<presentation>
+
+
+
+\RequirePackage[absolute,overlay]{textpos}
+\RequirePackage{tikz}
+\RequirePackage{calc}
+
+\usecolortheme{rose}
+\usecolortheme{dolphin}
+\useinnertheme{default}
+\useoutertheme{infolines}
+
+% itemizeの頭 (1段目)
+\setbeamertemplate{itemize item}{\hbox{\donotcoloroutermaths$\bullet$}}
+% itemizeの頭 (2段目)
+\setbeamertemplate{itemize subitem}{\tiny\raise1.0pt\hbox{\normalsize\donotcoloroutermaths$\blacktriangleright$}}
+
+% 左右の余白
+\setbeamersize{text margin left=1.5em,text margin right=1.5em}
+
+%Beamerの設定
+\usefonttheme{structurebold} % タイトル部を太字
+\setbeamerfont{alerted text}{series=\bfseries} % Alertを太字
+\setbeamerfont{section in toc}{series=\mdseries} % 目次は太字にしない
+\setbeamerfont{frametitle}{size=\Large} % フレームタイトル文字サイズ
+\setbeamerfont{title}{size=\Large}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{author}{size=\normalsize} % 著者文字サイズ
+\setbeamerfont{institute}{size=\small}
+\setbeamerfont{date}{size=\small}  % 日付文字サイズ
+
+%Beamer色設定
+\definecolor{UniBlue}{RGB}{0,113,188}
+\definecolor{AlertOrange}{RGB}{252,50,55}
+\definecolor{MainGray}{RGB}{44,44,44}
+\definecolor{LineGray}{RGB}{217,217,217}
+\setbeamercolor{normal text}{fg=MainGray}  % 本文カラー
+\setbeamercolor{structure}{fg=UniBlue} % 全体カラー
+\setbeamercolor{block title}{fg=UniBlue} % ブロック部分タイトルカラー
+\setbeamercolor{alerted text}{fg=AlertOrange} % \alert 文字カラー
+
+%フラットデザイン化
+\setbeamertemplate{blocks}[rounded] % blockの角をまるく
+\setbeamertemplate{navigation symbols}{} % ナビゲーションシンボルを消す
+\setbeamertemplate{headline}{}
+% \setbeamertemplate{footline}[frame number]{} % フッターはスライド番号のみ
+
+%-----------------------------------------------------------------------------
+
+%\setbeamerfont{footline}{size=\small,series=\bfseries} % スライド番号を大きく
+% footline (\insert 自定義)
+\setbeamercolor{section in head/foot}{parent=headerlike}
+\setbeamercolor{subsection in head/foot}{parent=footerlike}
+\setbeamercolor{author in head/foot}{parent=footerlike}
+\setbeamercolor{title in head/foot}{parent=footerlike}
+\defbeamertemplate*{footline}{Productive}
+{
+    \leavevmode% 
+    \hbox{%
+    \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm, rightskip=.3cm plus1fil]{author in head/foot}%
+        \usebeamerfont{author in head/foot}\insertshortinstitute  \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+        \usebeamerfont{title in head/foot}{\textit \insertshortauthor}%
+        \hskip2ex plus1fill%
+            % \insertpagenumber\,/\,\insertpresentationendpage %% Want FRAME, not SLIDE number
+            \insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}%
+    }%
+    \begin{tikzpicture}[overlay]
+        \usebeamercolor[bg]{author in head/foot}
+        \draw[thick] (0,3.625ex) -- (\paperwidth,3.625ex);
+        \draw (.4\paperwidth,0) -- (.4\paperwidth,3.625ex);
+        \draw[thick] (0,0) -- (\paperwidth,0);
+    \end{tikzpicture}
+}
+
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+
+\beamertemplatetextbibitems
+
+\newlength{\offsetw}
+\setlength{\offsetw}{-1.6cm}
+\setlength{\offsetw}{\offsetw+\paperwidth}
+\newlength{\offseth}
+\setlength{\offseth}{-1.6cm}
+\setlength{\offseth}{\offseth+\paperheight}
+
+%タイトルページ
+% \setbeamertemplate{title page}{%
+%     \begin{textblock*}{\paperwidth}(0mm, 0mm)%
+%         \begin{tikzpicture}
+%             \filldraw [fill=UniBlue,draw=UniBlue] (0,0) -- (0,1.6) -- (1.6,1.6)--cycle;
+%         \end{tikzpicture}
+%     \end{textblock*}%
+%     \vspace{3.0em}%
+%     \begin{center}%
+%         {\usebeamerfont{title} \usebeamercolor[fg]{title} \inserttitle \par}%
+%         \medskip
+%         {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle \par}%
+%         \bigskip%
+%         \bigskip%
+%     	{\usebeamerfont{author}\insertauthor\par}%
+%         \medskip%
+%     	{\usebeamerfont{institute}\insertinstitute \par}%
+%     	\medskip%
+%     	{\usebeamerfont{date}\insertdate\par}%
+%     	\medskip%
+%     	{\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic}%
+%     \end{center}%
+%     \begin{textblock*}{1cm}(\offsetw, \offseth)%
+%         \begin{tikzpicture}[rotate=180]
+%             \filldraw [fill=UniBlue,draw=UniBlue] (0,0) -- (0,1.6) -- (1.6,1.6)--cycle;
+%         \end{tikzpicture}
+%     \end{textblock*}%
+% }
+
+% スライドタイトル
+\setbeamertemplate{frametitle}{%
+\insertframetitle\par
+\vspace{-3mm}
+\textcolor{LineGray}{\rule[-1.5mm]{\linewidth}{2pt}}
+}
+
+% \AtBeginSection[]{
+%     \frame{\tableofcontents[currentsection, hideallsubsections]} %目次スライド
+% }
+
+%allowframebreaks numbering in the title
+\newcounter{cont}
+\setbeamertemplate{frametitle continuation}{%
+    \setcounter{cont}{\beamer@endpageofframe}%
+    \addtocounter{cont}{1}%
+    \addtocounter{cont}{-\beamer@startpageofframe}%
+    \ifnum \value{cont}>1%
+    [\insertcontinuationcount/\arabic{cont}]
+    \fi%
+}
+
+% sectionpageのデザイン
+\setbeamertemplate{section page}
+{
+    \begin{beamercolorbox}[sep=12pt,center]{section title}
+        \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+}
+
+% 背景色の無いblock:descriptionの代わりに使える
+\newenvironment<>{descriptionblock}[1]{%
+    \setbeamertemplate{blocks}[default]%
+    \setbeamercolor{block title}{fg=UniBlue,bg=white}%
+    \begin{block}#2{#1}}{\end{block}
+}
+
+\usefonttheme{Zurich}
+
+\mode<all>
+\endinput
