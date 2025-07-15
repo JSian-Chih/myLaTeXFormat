@@ -1,5 +1,6 @@
 % Chih, Chao-Hsien
 % 2022-02-21 Ver.1
+% 2025-07-15 Ver.2 for lualatex
 
 
 %------------------------------------------------------------
@@ -40,16 +41,8 @@
 
 
 % 2021-11-08
-\usepackage{graphicx} % 插入圖片 
-\graphicspath{{Figure/}} % 指定圖檔搜尋路徑
+\usepackage{graphicx} % 插入圖片
 \usepackage{fontspec} % 加這個就可以設定字體。
-% \usepackage{xeCJK} % 讓中英文字體分開設置。
-%設定中文為系統上的字型，而英文不去更動，使用原TEX字型。
-% \setCJKmainfont[AutoFakeBold=2]{MSJH.TTC}
-% \setCJKsansfont[AutoFakeBold=2]{MSJH.TTC}
-%\setCJKmainfont[BoldFont={王漢宗特黑體繁}]{王漢宗細黑體繁}
-%\XeTeXlinebreaklocale "zh" %這兩行一定要加，中文才能自動換行。
-%\XeTeXlinebreakskip = 0pt plus 1pt % 這兩行一定要加，中文才能自動換行。
 
 \usepackage{float}
 \usepackage{array}
@@ -60,7 +53,6 @@
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
 \usepackage{hyperref}
-% \usepackage{movie15}
 \usepackage{url}
 \usepackage{cite}
 
@@ -124,6 +116,9 @@
 
 % 圖片路徑
 \graphicspath{{figure}}
+
+% 影片相關
+\usepackage{multimedia}
 
 % -------------------------------------------------------------
 
